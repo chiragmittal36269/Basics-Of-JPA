@@ -15,7 +15,8 @@ public class Book {
 
     @ManyToOne  // many denotes current class which is book class(child) and one denotes author class(parent)
     @JoinColumn     // it creates the foreign key column in the book table so that it can be accessible by primary key of author table
-    Author author;  // it creates the column in the boo table whose name is PrimaryKeyTableName_name of primary key
+    Author author;  // here we pass the whole class and from this with the help of @JoinColumn sql find the primary key
+    // it creates the column in the book table whose name is PrimaryKeyTableName_name of primary key
     // like author_author_id;       //nameOfClass_nameOfPrimaryKey
 
     public Book() {

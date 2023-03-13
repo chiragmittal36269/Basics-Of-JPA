@@ -19,7 +19,7 @@ public class Card {
     @JoinColumn // to make the column of primary key which makes the foreign key for Card class
                 // if we use @JoinColumn(key = anything) then we can make anything as a foreign key which is unique and not null.
                 // by default foreign key is nothing but the primary key of the parent class
-    User user;
+    User user;  // here we pass the whole class and from this with the help of @JoinColumn sql find the primary key
 //why @JoinColumn is written in the child class because it will generate the foreign key for that class
     public Card() {
     }
